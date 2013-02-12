@@ -148,7 +148,7 @@ con <- dbConnect(MySQL(), user="userid", password="pswd", host="hostname", clien
 sql <- "SELECT * from SurveyResults WHERE City = 'Chicago'"
 rows <- dbGetQuery(con, sql)
 
-dbConnect(MySQL(),user='alberto_quadri',password='Ag52479253',dbname='quadrigram',host='mysql.ekonlab.com')
+dbConnect(MySQL(),user='alberto_quadri',password='',dbname='quadrigram',host='mysql.ekonlab.com')
 dbListTables(mydb)
 x <- dbGetQuery(mydb,"select * from Control_Module where example='yes'")
 x <- dbGetQuery(mydb,"select * from Control_Module where example='yes' && library='resources'")
