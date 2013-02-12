@@ -144,11 +144,11 @@ readLines(con = stdin(), n = -1L, ok = TRUE, warn = TRUE, encoding = "unknown")
 
 # lectura de datos de bases de datos MySQL:
 library(RMySQL)
-con <- dbConnect(MySQL(), user="userid", password="pswd", host="hostname", client.flag=CLIENT_MULTI_RESULTS)
+con <- dbConnect(MySQL(), user="userid", password="pswd", host="hostname" ,dbname="database",)
 sql <- "SELECT * from SurveyResults WHERE City = 'Chicago'"
 rows <- dbGetQuery(con, sql)
 
-dbConnect(MySQL(),user='alberto_quadri',password='',dbname='quadrigram',host='mysql.ekonlab.com')
+dbConnect(MySQL(),user="userid", password="pswd", host="hostname" ,dbname="database",)
 dbListTables(mydb)
 x <- dbGetQuery(mydb,"select * from Control_Module where example='yes'")
 x <- dbGetQuery(mydb,"select * from Control_Module where example='yes' && library='resources'")
